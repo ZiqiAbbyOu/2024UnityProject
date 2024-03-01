@@ -1,0 +1,51 @@
+﻿<Properties StartupConfiguration="{7976D3B1-1535-9701-B7BB-09E2143327A4}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_FontAsset.cs">
+    <Files>
+      <File FileName="Assets/Scripts/UI/CustomizationScnenes/CustomizationSceneManager.cs" Line="13" Column="47" />
+      <File FileName="Assets/Scripts/UI/CustomizationScnenes/RoleSelectionController.cs" />
+      <File FileName="Assets/Scripts/UI/CustomizationScnenes/RoleDescriptionUIManager.cs" />
+      <File FileName="Assets/Scripts/UI/CustomizationScnenes/RoleBarController.cs" Line="29" Column="54" />
+      <File FileName="Assets/Scripts/UI/CustomizationScnenes/RoleBar.cs" />
+      <File FileName="Assets/Scripts/UI/CustomizationScnenes/RoleDescriptionController.cs" />
+      <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_FontAsset.cs" Line="2065" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Hersland" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="I2" expanded="True">
+                <Node name="Localization" expanded="True" />
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="Characters" expanded="True">
+                  <Node name="Roles" expanded="True" />
+                </Node>
+                <Node name="Map" expanded="True">
+                  <Node name="Building" expanded="True" />
+                  <Node name="Tiles" expanded="True" />
+                </Node>
+                <Node name="UI" expanded="True">
+                  <Node name="CustomizationScnenes" expanded="True">
+                    <Node name="CustomizationSceneManager.cs" selected="True" />
+                  </Node>
+                  <Node name="General" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="TextMesh Pro" expanded="True">
+                <Node name="Fonts" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b6cbb922-32b0-428b-8323-595763a9e00c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

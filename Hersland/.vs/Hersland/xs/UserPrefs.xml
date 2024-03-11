@@ -2,25 +2,23 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/CustomizationScnenes/WuXingAdjustmentController.cs">
     <Files>
       <File FileName="Assets/Scripts/UI/General/RadarChartMesh.cs" Line="42" Column="68" />
-      <File FileName="Assets/Scripts/Characters/WuXing.cs" Line="19" Column="108" />
-      <File FileName="Assets/Scripts/UI/CustomizationScnenes/WuXingRadarChartController.cs" Line="85" Column="1" />
-      <File FileName="Assets/Scripts/Characters/Properties/PropertiesManager.cs" Line="80" Column="91" />
+      <File FileName="Assets/Scripts/Characters/WuXing.cs" />
+      <File FileName="Assets/Scripts/UI/CustomizationScnenes/WuXingRadarChartController.cs" />
+      <File FileName="Assets/Scripts/Characters/Properties/PropertiesManager.cs" />
       <File FileName="Assets/Scripts/UI/CustomizationScnenes/WuXingAdjustmentController.cs" Line="26" Column="48" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Hersland" expanded="True">
-            <Node name="Assets" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Characters" expanded="True">
                   <Node name="Properties" expanded="True" />
                   <Node name="Roles" expanded="True" />
                 </Node>
                 <Node name="UI" expanded="True">
-                  <Node name="CustomizationScnenes" expanded="True">
-                    <Node name="WuXingAdjustmentController.cs" selected="True" />
-                  </Node>
+                  <Node name="CustomizationScnenes" expanded="True" />
                   <Node name="General" expanded="True" />
                 </Node>
               </Node>
@@ -35,7 +33,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="434bfe86-de3f-452b-8e5f-d8c3cb097188" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d2a63474-b0d9-42a0-a6c8-32994138cdba" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

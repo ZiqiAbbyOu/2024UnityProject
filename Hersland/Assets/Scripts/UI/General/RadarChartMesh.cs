@@ -16,16 +16,18 @@ namespace HL.UI
 
         private void Start()
         {
+
+            characterWuXing = GameObject.Find("Player").GetComponent<WuXing>();
+            characterWuXingCapData = characterWuXing.GetWuXingCapArray();
             
-            //characterWuXing = GameObject.Find("Player").GetComponent<WuXing>();
-            //characterWuXingCapData = characterWuXing.GetWuXingArray();
             GenerateRadarMesh(characterWuXingCapData, 100);
 
 
         }
 
-        private void Update()
+        public void UpdateRadarMesh()
         {
+
             GenerateRadarMesh(characterWuXingCapData, 100);
         }
 

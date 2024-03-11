@@ -13,17 +13,18 @@ namespace HL.UI.CustomizationScene
     public class WuXingAdjustmentController : MonoBehaviour
     {
         public Transform wuXingPanelTransform;
-        [SerializeField] private GameObject adjustmentGameObject;
-        [SerializeField] private PropertiesManager.WuXingType currentWuXing;
+        [SerializeField] private GameObject adjustmentUIGameObject;
+        [SerializeField] private PropertiesManager.WuXingType currentWuXingType;
         [SerializeField] private WuXingRadarChartController wuXingRadarChartController;
         public Button[] elementButtons = new Button[5];
-        public InputField statsInputField;
+        HL.Characters.CharacterInfo playerInfo;
+        public TMP_InputField statsInputField;
 
         private void Start()
         {
 
             // Get user info
-            HL.Characters.CharacterInfo playerInfo = GameObject.Find("Player").GetComponent<HL.Characters.CharacterInfo>();
+            playerInfo = GameObject.Find("Player").GetComponent<HL.Characters.CharacterInfo>();
 
             // Display Wu Xing Chart
             WuXing playerWuXing = playerInfo.wuXing;
@@ -41,40 +42,50 @@ namespace HL.UI.CustomizationScene
             for (int i = 0; i < elementButtons.Length; i++)
             {
                 int index = i;
-                elementButtons[i].onClick.AddListener(() => OnElementButtonClicked(i));
+                elementButtons[i].onClick.AddListener(() => OnElementButtonClicked(index));
 
 
             }
 
+            
+
         }
 
+        // buttons event
         private void OnElementButtonClicked(int index)
         {
 
             switch (index)
             {
                 case 0:
-                    currentWuXing = PropertiesManager.WuXingType.Jin;
+                    currentWuXingType = PropertiesManager.WuXingType.Jin;
                     break;
                 case 1:
-                    currentWuXing = PropertiesManager.WuXingType.Mu;
+                    currentWuXingType = PropertiesManager.WuXingType.Mu;
                     break;
 
                 case 2:
-                    currentWuXing = PropertiesManager.WuXingType.Shui;
+                    currentWuXingType = PropertiesManager.WuXingType.Shui;
                     break;
 
                 case 3:
-                    currentWuXing = PropertiesManager.WuXingType.Huo;
+                    currentWuXingType = PropertiesManager.WuXingType.Huo;
                     break;
 
                 case 4:
-                    currentWuXing = PropertiesManager.WuXingType.Tu;
+                    currentWuXingType = PropertiesManager.WuXingType.Tu;
                     break;
 
             }
 
-            adjustmentGameObject.SetActive(true);
+            
+
+            adjustmentUIGameObject.SetActive(true);
+
+            // Set input file
+            statsInputField = GameObject.Find("Wu Xing Stats InputField (TMP)").GetComponent<TMP_InputField>();
+            statsInputField.text = ((int)playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType)).ToString();
+            Debug.Log(currentWuXingType);
         }
 
         private void SetUpWuXingRadarChartDiscription()
@@ -94,12 +105,17 @@ namespace HL.UI.CustomizationScene
 
         public void ShowsAdjustmentGameObject()
         {
-            adjustmentGameObject.SetActive(true);
+            adjustmentUIGameObject.SetActive(true);
         }
 
-        public void IncreaseCurrentWuXingCapByOne()
+        public void IncreaseCurrentWuXingElementCapByOne()
         {
-            
+            playerInfo.wuXing.IncreaseWuXingCapStatsByType(currentWuXingType);
+        }
+
+        public void DecreaseCurrentWuXingElementCapByOne()
+        {
+            playerInfo.wuXing.IncreaseWuXingCapStatsByType(currentWuXingType);
         }
 
         public void LogInput()

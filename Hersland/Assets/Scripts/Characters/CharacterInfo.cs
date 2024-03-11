@@ -18,7 +18,10 @@ namespace HL.Characters
         public void Awake()
         {
             DontDestroyOnLoad(gameObject);
-            wuXing = gameObject.AddComponent<WuXing>();
+            if (wuXing == null)
+            {
+                wuXing = gameObject.AddComponent<WuXing>();
+            }
         }
 
         public void SetCharacterRole(RoleType roleType)

@@ -4298,8 +4298,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wuXingPanelTransform: {fileID: 1768339845}
-  adjustmentGameObject: {fileID: 160501805}
-  currentWuXing: 0
+  adjustmentUIGameObject: {fileID: 160501805}
+  currentWuXingType: 0
   wuXingRadarChartController: {fileID: 0}
   elementButtons: []
   statsInputField: {fileID: 0}

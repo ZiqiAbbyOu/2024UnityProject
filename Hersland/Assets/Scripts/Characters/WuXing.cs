@@ -18,6 +18,22 @@ namespace HL.Characters
         public Dictionary<WuXingType, float> wuXingStatsDictionary = new Dictionary<WuXingType, float>();
         public Dictionary<WuXingType, float> wuXingCapStatsDictionary = new Dictionary<WuXingType, float>();
 
+        // cap
+        public float jinCap = 80f;
+        public float muCap = 50f;
+        public float shuiCap = 50f;
+        public float huoCap = 50f;
+        public float tuCap = 50f;
+
+        public float jin = 80f;
+        public float mu = 50f;
+        public float shui = 50f;
+        public float huo = 50f;
+        public float tu = 50f;
+
+        //Wu Xing radar chart
+        [SerializeField] private GameObject characterRadarChartPanelPrefab;
+
 
         private void Awake()
         {
@@ -29,20 +45,20 @@ namespace HL.Characters
         public void InitializeWuXingStatsDictionary()
         {
             
-            wuXingStatsDictionary.Add(WuXingType.Jin, 50f);
-            wuXingStatsDictionary.Add(WuXingType.Mu, 50f);
-            wuXingStatsDictionary.Add(WuXingType.Shui, 50f);
-            wuXingStatsDictionary.Add(WuXingType.Huo, 50f);
-            wuXingStatsDictionary.Add(WuXingType.Tu, 50f);
+            wuXingStatsDictionary.Add(WuXingType.Jin, jin);
+            wuXingStatsDictionary.Add(WuXingType.Mu, mu);
+            wuXingStatsDictionary.Add(WuXingType.Shui, shui);
+            wuXingStatsDictionary.Add(WuXingType.Huo, huo);
+            wuXingStatsDictionary.Add(WuXingType.Tu, tu);
         }
 
         public void SetUpWuXingCapStatsDictionary()
         {
-            wuXingCapStatsDictionary.Add(WuXingType.Jin, 30f);
-            wuXingCapStatsDictionary.Add(WuXingType.Mu, 30f);
-            wuXingCapStatsDictionary.Add(WuXingType.Shui, 30f);
-            wuXingCapStatsDictionary.Add(WuXingType.Huo, 30f);
-            wuXingCapStatsDictionary.Add(WuXingType.Tu, 30f);
+            wuXingCapStatsDictionary.Add(WuXingType.Jin, jinCap);
+            wuXingCapStatsDictionary.Add(WuXingType.Mu, muCap);
+            wuXingCapStatsDictionary.Add(WuXingType.Shui, shuiCap);
+            wuXingCapStatsDictionary.Add(WuXingType.Huo, huoCap);
+            wuXingCapStatsDictionary.Add(WuXingType.Tu, tuCap);
         }
 
         public void ResetStatsDictionary(Dictionary<WuXingType, float> statsDictionary, WuXingType wuXingType, float stats)
@@ -50,24 +66,25 @@ namespace HL.Characters
             statsDictionary[wuXingType] = stats;
         }
 
+        public float GetWuXingCapStatsByType(PropertiesManager.WuXingType wuXingType)
+        {
+            float wuXingCapStats = wuXingCapStatsDictionary[wuXingType];
+
+            return wuXingCapStats;
+        }
+
+        public void IncreaseWuXingCapStatsByType(PropertiesManager.WuXingType wuXingType)
+        {
+            wuXingCapStatsDictionary[wuXingType] += 1.0f;
+        }
+
+        public void DecreaseWuXingCapStatsByType(PropertiesManager.WuXingType wuXingType)
+        {
+            wuXingCapStatsDictionary[wuXingType] -= 1.0f;
+        }
 
 
 
-        // cap
-        public float jinCap = 50f;
-        public float muCap = 50f;
-        public float shuiCap = 50f;
-        public float huoCap = 50f;
-        public float tuCap = 50f;
-
-        public float jin = 50f;
-        public float mu = 50f;
-        public float shui = 50f;
-        public float huo = 50f;
-        public float tu = 50f;
-
-        //Wu Xing radar chart
-        [SerializeField] private GameObject characterRadarChartPanelPrefab;
 
         public float[] GetWuXingArray()
         {

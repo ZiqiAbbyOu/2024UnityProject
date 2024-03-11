@@ -15,6 +15,7 @@ namespace HL.UI {
         public TextMeshProUGUI element;
         public TextMeshProUGUI elementDiscription;
         [SerializeField] private PropertiesManager.WuXingType currentType;
+        public HL.Characters.CharacterInfo characterInfo;
 
 
         private void Start()
@@ -55,6 +56,18 @@ namespace HL.UI {
 
             }
             DisplayDiscription();
+        }
+
+        public void DisplayStatsCapRadarChart(Transform wuXingDisplayChartTransform)
+        {
+            RadarChartMesh radarChartMesh = GameObject.Find("Wu Xing Radar Chart Panel(clone)").GetComponent<RadarChartMesh>();
+            radarChartMesh.displayChartTransform = wuXingDisplayChartTransform;
+            radarChartMesh.GenerateRadarMesh(characterInfo.wuXing.GetWuXingCapArray(), (int)characterInfo.wuXing.maxStat);
+        }
+
+        public void SetCharacterInfo(HL.Characters.CharacterInfo thisCharacterInfo)
+        {
+            characterInfo = thisCharacterInfo;
         }
 
         public Button[] GetButtons()

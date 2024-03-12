@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5116681896424981091}
   - component: {fileID: 3413620194585830516}
-  - component: {fileID: 7560148404095791253}
   - component: {fileID: 7415358322725962938}
   - component: {fileID: 4335196259757499640}
+  - component: {fileID: 1688750989811528021}
   - component: {fileID: 6216969849064583791}
   m_Layer: 5
   m_Name: Wu Xing Radar Chart Panel
@@ -53,27 +53,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828303182185070467}
   m_CullTransparentMesh: 1
---- !u!114 &7560148404095791253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 828303182185070467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20dcb9fdf8963420ea5a7075a2300089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elementButton:
-  - {fileID: 7900534963309639506}
-  - {fileID: 3037811694513152080}
-  - {fileID: 5774015586747133438}
-  - {fileID: 5271361072843941226}
-  - {fileID: 5747885218618901791}
-  element: {fileID: 0}
-  elementDiscription: {fileID: 0}
-  currentType: 0
 --- !u!223 &7415358322725962938
 Canvas:
   m_ObjectHideFlags: 0
@@ -119,7 +98,29 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
+--- !u!114 &1688750989811528021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828303182185070467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7662e1b28d71840d2933e341e65d4f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementButton:
+  - {fileID: 7900534963309639506}
+  - {fileID: 3037811694513152080}
+  - {fileID: 5774015586747133438}
+  - {fileID: 5271361072843941226}
+  - {fileID: 5747885218618901791}
+  element: {fileID: 0}
+  elementDiscription: {fileID: 0}
+  currentType: 0
+  playerInfo: {fileID: 0}
 --- !u!114 &6216969849064583791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,7 +530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 77.2, y: 17.1}
+  m_AnchoredPosition: {x: -79.6, y: 17.7}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6973913212085333237
@@ -784,7 +785,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50.4, y: -76.8}
+  m_AnchoredPosition: {x: 50.5, y: -76.8}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6887771223868379699
@@ -1114,7 +1115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -81.4, y: 17.5}
+  m_AnchoredPosition: {x: 78.6, y: 15.5}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4591354936383002278
@@ -1235,7 +1236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 51.3, y: -77.5}
+  m_AnchoredPosition: {x: -50.8, y: -76.3}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1348698154218816755
@@ -1504,13 +1505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27155e1a2218469ea4a516955b2b8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterWuXingCapData:
-  - 100
-  - 50
-  - 50
-  - 50
-  - 50
-  characterWuXing: {fileID: 0}
   displayChartTransform: {fileID: 4657896139378952321}
 --- !u!1 &8912401751537768420
 GameObject:

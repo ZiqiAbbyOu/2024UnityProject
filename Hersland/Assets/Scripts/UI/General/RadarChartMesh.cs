@@ -10,26 +10,8 @@ namespace HL.UI
     [RequireComponent(typeof(MeshRenderer))]
     public class RadarChartMesh : MonoBehaviour
     {
-        public float[] characterWuXingCapData = new float[5];
-        public WuXing characterWuXing;
         public Transform displayChartTransform;
 
-        private void Start()
-        {
-
-            characterWuXing = GameObject.Find("Player").GetComponent<WuXing>();
-            characterWuXingCapData = characterWuXing.GetWuXingCapArray();
-            
-            GenerateRadarMesh(characterWuXingCapData, 100);
-
-
-        }
-
-        public void UpdateRadarMesh()
-        {
-
-            GenerateRadarMesh(characterWuXingCapData, 100);
-        }
 
         public void GenerateRadarMesh(float[] data, int dataScale)
         {

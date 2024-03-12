@@ -15,7 +15,7 @@ namespace HL.UI.CustomizationScene
         public Transform wuXingPanelTransform;
         [SerializeField] private GameObject adjustmentUIGameObject;
         [SerializeField] private PropertiesManager.WuXingType currentWuXingType;
-        [SerializeField] private WuXingRadarChartController wuXingRadarChartController;
+        [SerializeField] private CustomizationSceneWuXingRadarChartController wuXingRadarChartController;
         public Button[] elementButtons = new Button[5];
         HL.Characters.CharacterInfo playerInfo;
         public TMP_InputField statsInputField;
@@ -34,7 +34,7 @@ namespace HL.UI.CustomizationScene
 
             // listen to the element Buttons;
 
-            wuXingRadarChartController = GameObject.Find("Wu Xing Radar Chart Panel(Clone)").GetComponent<WuXingRadarChartController>();
+            wuXingRadarChartController = GameObject.Find("Wu Xing Radar Chart Panel(Clone)").GetComponent<CustomizationSceneWuXingRadarChartController>();
             
             elementButtons = wuXingRadarChartController.GetButtons();
 
@@ -86,11 +86,24 @@ namespace HL.UI.CustomizationScene
             statsInputField = GameObject.Find("Wu Xing Stats InputField (TMP)").GetComponent<TMP_InputField>();
             statsInputField.text = ((int)playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType)).ToString();
             Debug.Log(currentWuXingType);
+
+        }
+
+        public void UpdateMesh()
+        {
+            // Update Mesh
+            RadarChartMesh radarChartMesh = GameObject.Find("Radar Chart").GetComponent<RadarChartMesh>();
+            if (radarChartMesh is null)
+            {
+                Debug.LogWarning("Radar Chart or Radar Chart Mesh Cannot be found");
+            }
+            radarChartMesh.GenerateRadarMesh(playerInfo.wuXing.GetWuXingCapArray(), (int)playerInfo.wuXing.maxStat);
+
         }
 
         private void SetUpWuXingRadarChartDiscription()
         {
-            WuXingRadarChartController wuXingRadarChartController = GameObject.Find("Wu Xing Radar Chart Panel(Clone)").GetComponent<WuXingRadarChartController>();
+            CustomizationSceneWuXingRadarChartController wuXingRadarChartController = GameObject.Find("Wu Xing Radar Chart Panel(Clone)").GetComponent<CustomizationSceneWuXingRadarChartController>();
             if (wuXingRadarChartController == null)
             {
                 Debug.LogWarning("Wu Xing Radar Chart Controller Haven't Set up");
@@ -111,12 +124,17 @@ namespace HL.UI.CustomizationScene
         public void IncreaseCurrentWuXingElementCapByOne()
         {
             playerInfo.wuXing.IncreaseWuXingCapStatsByType(currentWuXingType);
+            statsInputField.text = ((int)playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType)).ToString();
+            UpdateMesh();
         }
 
         public void DecreaseCurrentWuXingElementCapByOne()
         {
-            playerInfo.wuXing.IncreaseWuXingCapStatsByType(currentWuXingType);
+            playerInfo.wuXing.DecreaseWuXingCapStatsByType(currentWuXingType);
+            statsInputField.text = ((int)playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType)).ToString();
+            UpdateMesh();
         }
+
 
         public void LogInput()
         {
@@ -125,4 +143,5 @@ namespace HL.UI.CustomizationScene
 
 
     }
+
 }

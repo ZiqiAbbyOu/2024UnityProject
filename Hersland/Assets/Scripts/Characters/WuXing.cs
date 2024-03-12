@@ -21,7 +21,7 @@ namespace HL.Characters
         // cap
         public float jinCap = 80f;
         public float muCap = 50f;
-        public float shuiCap = 50f;
+        public float shuiCap = 80f;
         public float huoCap = 50f;
         public float tuCap = 50f;
 

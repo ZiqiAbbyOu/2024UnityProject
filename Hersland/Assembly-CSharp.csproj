@@ -97,6 +97,7 @@
     <Compile Include="Assets/I2/Localization/Scripts/Targets/ILocalizeTarget.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Targets/LocalizeTarget_NGUI_Texture.cs" />
     <Compile Include="Assets/I2/Localization/Examples/Common/Scripts/GlobalParametersExample.cs" />
+    <Compile Include="Assets/Scripts/UI/CustomizationScnenes/CustomizationSceneWuXingRadarChartController.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/LanguageSource/LanguageSourceData_Misc.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Utils/HindiFixer.cs" />
     <Compile Include="Assets/I2/Localization/Examples/Common/Scripts/Example_LocalizedString.cs" />
@@ -136,7 +137,6 @@
     <Compile Include="Assets/I2/Localization/Scripts/Google/GoogleTranslation_Queries.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Google/GoogleLanguages.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Targets/LocalizeTarget_UnityStandard_MeshRenderer.cs" />
-    <Compile Include="Assets/Scripts/UI/CustomizationScnenes/WuXingRadarChartController.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Targets/LocalizeTarget_UnityStandard_SpriteRenderer.cs" />
     <Compile Include="Assets/Scripts/Map/MapGenerator.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Utils/LocalizationParamsManager.cs" />

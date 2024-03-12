@@ -137,7 +137,15 @@ namespace HL.UI.CustomizationScene
 
         public void UpdateCurrentWuXingCapByInput()
         {
-            playerInfo.wuXing.wuXingCapStatsDictionary[currentWuXingType] = float.Parse(statsInputField.text);
+            float value;
+            if (float.TryParse(statsInputField.text, out value)){
+                playerInfo.wuXing.wuXingCapStatsDictionary[currentWuXingType] = value;
+            }
+            else
+            {
+                playerInfo.wuXing.wuXingCapStatsDictionary[currentWuXingType] = 0;
+            }
+
             UpdateMesh();
 
         }

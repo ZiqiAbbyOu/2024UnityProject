@@ -472,6 +472,7 @@
 "Assets/Scripts/Map/Tiles/TileManager.cs"
 "Assets/Scripts/UI/CustomizationScnenes/CustomizationSceneManager.cs"
 "Assets/Scripts/UI/CustomizationScnenes/CustomizationSceneWuXingRadarChartController.cs"
+"Assets/Scripts/UI/CustomizationScnenes/InputFieldBoundsValidator.cs"
 "Assets/Scripts/UI/CustomizationScnenes/RoleBar.cs"
 "Assets/Scripts/UI/CustomizationScnenes/RoleBarController.cs"
 "Assets/Scripts/UI/CustomizationScnenes/RoleDescriptionController.cs"

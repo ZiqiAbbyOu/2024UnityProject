@@ -19,17 +19,17 @@ namespace HL.Characters
         public Dictionary<WuXingType, float> wuXingCapStatsDictionary = new Dictionary<WuXingType, float>();
 
         // cap
-        public float jinCap = 80f;
-        public float muCap = 50f;
-        public float shuiCap = 80f;
-        public float huoCap = 50f;
-        public float tuCap = 50f;
+        //public float jinCap = 80f;
+        //public float muCap = 50f;
+        //public float shuiCap = 80f;
+        //public float huoCap = 50f;
+        //public float tuCap = 50f;
 
-        public float jin = 80f;
-        public float mu = 50f;
-        public float shui = 50f;
-        public float huo = 50f;
-        public float tu = 50f;
+        //public float jin = 80f;
+        //public float mu = 50f;
+        //public float shui = 50f;
+        //public float huo = 50f;
+        //public float tu = 50f;
 
         //Wu Xing radar chart
         [SerializeField] private GameObject characterRadarChartPanelPrefab;
@@ -45,20 +45,20 @@ namespace HL.Characters
         public void InitializeWuXingStatsDictionary()
         {
             
-            wuXingStatsDictionary.Add(WuXingType.Jin, jin);
-            wuXingStatsDictionary.Add(WuXingType.Mu, mu);
-            wuXingStatsDictionary.Add(WuXingType.Shui, shui);
-            wuXingStatsDictionary.Add(WuXingType.Huo, huo);
-            wuXingStatsDictionary.Add(WuXingType.Tu, tu);
+            wuXingStatsDictionary.Add(WuXingType.Jin, 50);
+            wuXingStatsDictionary.Add(WuXingType.Mu, 50);
+            wuXingStatsDictionary.Add(WuXingType.Shui, 50);
+            wuXingStatsDictionary.Add(WuXingType.Huo, 50);
+            wuXingStatsDictionary.Add(WuXingType.Tu, 50);
         }
 
         public void SetUpWuXingCapStatsDictionary()
         {
-            wuXingCapStatsDictionary.Add(WuXingType.Jin, jinCap);
-            wuXingCapStatsDictionary.Add(WuXingType.Mu, muCap);
-            wuXingCapStatsDictionary.Add(WuXingType.Shui, shuiCap);
-            wuXingCapStatsDictionary.Add(WuXingType.Huo, huoCap);
-            wuXingCapStatsDictionary.Add(WuXingType.Tu, tuCap);
+            wuXingCapStatsDictionary.Add(WuXingType.Jin, 50);
+            wuXingCapStatsDictionary.Add(WuXingType.Mu, 50);
+            wuXingCapStatsDictionary.Add(WuXingType.Shui, 50);
+            wuXingCapStatsDictionary.Add(WuXingType.Huo, 50);
+            wuXingCapStatsDictionary.Add(WuXingType.Tu, 50);
         }
 
         public void ResetStatsDictionary(Dictionary<WuXingType, float> statsDictionary, WuXingType wuXingType, float stats)
@@ -81,6 +81,14 @@ namespace HL.Characters
         public void DecreaseWuXingCapStatsByType(PropertiesManager.WuXingType wuXingType)
         {
             wuXingCapStatsDictionary[wuXingType] -= 1.0f;
+        }
+
+        public float GetWuXingcapStat(WuXingType wuXingType)
+        {
+            float capStat = 0.0f;
+            capStat = wuXingCapStatsDictionary[wuXingType];
+
+            return capStat;
         }
 
 
@@ -111,11 +119,13 @@ namespace HL.Characters
 
         public void SetStatsByCap()
         {
-            jin = jinCap * 0.3f;
-            mu = muCap * 0.3f;
-            shui = shuiCap * 0.3f;
-            huo = huoCap * 0.3f;
-            tu = tuCap * 0.3f;
+            //jin = jinCap * 0.3f;
+            //mu = muCap * 0.3f;
+            //shui = shuiCap * 0.3f;
+            //huo = huoCap * 0.3f;
+            //tu = tuCap * 0.3f;
+
+            //todo: loop the type and set stats in dictionary.
         }
 
         public void DisplayWuXingCap(Transform transform)

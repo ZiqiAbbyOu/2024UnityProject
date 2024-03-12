@@ -60,6 +60,7 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.15f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/UI/CustomizationScnenes/InputFieldBoundsValidator.cs" />
     <Compile Include="Assets/I2/Localization/Examples/Common/Scripts/ToggleLanguage.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Google/GoogleTranslation.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Utils/ResourceManager.cs" />

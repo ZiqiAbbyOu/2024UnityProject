@@ -4,6 +4,7 @@ using UnityEngine;
 using HL.UI;
 using HL.Characters.Properties;
 using static HL.Characters.Properties.PropertiesManager;
+using System;
 
 namespace HL.Characters
 {
@@ -39,6 +40,7 @@ namespace HL.Characters
         {
             InitializeWuXingStatsDictionary();
             SetUpWuXingCapStatsDictionary();
+            SetStatsByCap();
         }
 
 
@@ -119,13 +121,11 @@ namespace HL.Characters
 
         public void SetStatsByCap()
         {
-            //jin = jinCap * 0.3f;
-            //mu = muCap * 0.3f;
-            //shui = shuiCap * 0.3f;
-            //huo = huoCap * 0.3f;
-            //tu = tuCap * 0.3f;
 
-            //todo: loop the type and set stats in dictionary.
+            foreach(WuXingType wuXingType in Enum.GetValues(typeof (WuXingType))){
+
+                wuXingStatsDictionary[wuXingType] = wuXingCapStatsDictionary[wuXingType] * 0.5f;
+            }
         }
 
         public void DisplayWuXingCap(Transform transform)

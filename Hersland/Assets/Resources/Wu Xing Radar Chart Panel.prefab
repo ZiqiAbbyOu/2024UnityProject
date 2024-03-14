@@ -98,7 +98,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &1688750989811528021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   elementDiscription: {fileID: 0}
   currentType: 0
   playerInfo: {fileID: 0}
+  wuXingDisplayChartTransform: {fileID: 0}
 --- !u!114 &6216969849064583791
 MonoBehaviour:
   m_ObjectHideFlags: 0

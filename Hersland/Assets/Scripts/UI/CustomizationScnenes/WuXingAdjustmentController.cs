@@ -13,12 +13,14 @@ namespace HL.UI.CustomizationScene
     public class WuXingAdjustmentController : MonoBehaviour
     {
         public Transform wuXingPanelTransform;
+        public Transform wuXingRadarChartTransform;
         [SerializeField] private GameObject adjustmentUIGameObject;
         [SerializeField] private PropertiesManager.WuXingType currentWuXingType;
         [SerializeField] private CustomizationSceneWuXingRadarChartController wuXingRadarChartController;
         public Button[] elementButtons = new Button[5];
         HL.Characters.CharacterInfo playerInfo;
         public TMP_InputField statsInputField;
+
 
         private void Start()
         {
@@ -28,13 +30,13 @@ namespace HL.UI.CustomizationScene
 
             // Display Wu Xing Chart
             WuXing playerWuXing = playerInfo.wuXing;
-            playerWuXing.DisplayWuXingCap(wuXingPanelTransform);
+            //playerWuXing.DisplayWuXingCap(wuXingPanelTransform);
             SetUpWuXingRadarChartDiscription();
 
 
             // listen to the element Buttons;
 
-            wuXingRadarChartController = GameObject.Find("Wu Xing Radar Chart Panel(Clone)").GetComponent<CustomizationSceneWuXingRadarChartController>();
+            wuXingRadarChartController = GameObject.Find("Wu Xing Radar Chart Panel").GetComponent<CustomizationSceneWuXingRadarChartController>();
             
             elementButtons = wuXingRadarChartController.GetButtons();
 
@@ -85,25 +87,13 @@ namespace HL.UI.CustomizationScene
             // Set input file
             statsInputField = GameObject.Find("Wu Xing Stats InputField (TMP)").GetComponent<TMP_InputField>();
             statsInputField.text = ((int)playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType)).ToString();
-            Debug.Log(currentWuXingType);
 
         }
 
-        public void UpdateMesh()
-        {
-            // Update Mesh
-            RadarChartMesh radarChartMesh = GameObject.Find("Radar Chart").GetComponent<RadarChartMesh>();
-            if (radarChartMesh is null)
-            {
-                Debug.LogWarning("Radar Chart or Radar Chart Mesh Cannot be found");
-            }
-            radarChartMesh.GenerateRadarMesh(playerInfo.wuXing.GetWuXingCapArray(), (int)playerInfo.wuXing.maxStat);
-
-        }
+        
 
         private void SetUpWuXingRadarChartDiscription()
         {
-            CustomizationSceneWuXingRadarChartController wuXingRadarChartController = GameObject.Find("Wu Xing Radar Chart Panel(Clone)").GetComponent<CustomizationSceneWuXingRadarChartController>();
             if (wuXingRadarChartController == null)
             {
                 Debug.LogWarning("Wu Xing Radar Chart Controller Haven't Set up");
@@ -121,19 +111,35 @@ namespace HL.UI.CustomizationScene
             adjustmentUIGameObject.SetActive(true);
         }
 
+
+
+        // Update Chart
+        public void UpdateWuXingCapMesh()
+        {
+            wuXingRadarChartController.DisplayStatsCapRadarChart();
+
+        }
+
+        public void UpdateWuXingMesh()
+        {
+            wuXingRadarChartController.DisplayStatsRadarChart();
+        }
+
         public void IncreaseCurrentWuXingElementCapByOne()
         {
             playerInfo.wuXing.IncreaseWuXingCapStatsByType(currentWuXingType);
             statsInputField.text = ((int)playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType)).ToString();
-            UpdateMesh();
+            UpdateWuXingCapMesh();
         }
 
         public void DecreaseCurrentWuXingElementCapByOne()
         {
             playerInfo.wuXing.DecreaseWuXingCapStatsByType(currentWuXingType);
             statsInputField.text = ((int)playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType)).ToString();
-            UpdateMesh();
+            UpdateWuXingCapMesh();
         }
+
+
 
         public void UpdateCurrentWuXingCapByInput()
         {
@@ -146,7 +152,7 @@ namespace HL.UI.CustomizationScene
                 playerInfo.wuXing.wuXingCapStatsDictionary[currentWuXingType] = 0;
             }
 
-            UpdateMesh();
+            UpdateWuXingCapMesh();
 
         }
 

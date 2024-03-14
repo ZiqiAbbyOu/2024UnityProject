@@ -15,25 +15,25 @@ namespace HL.Characters
         public float maxStat = 100;
         public float minStat = 0;
 
-
         public Dictionary<WuXingType, float> wuXingStatsDictionary = new Dictionary<WuXingType, float>();
         public Dictionary<WuXingType, float> wuXingCapStatsDictionary = new Dictionary<WuXingType, float>();
 
-        // cap
-        //public float jinCap = 80f;
-        //public float muCap = 50f;
-        //public float shuiCap = 80f;
-        //public float huoCap = 50f;
-        //public float tuCap = 50f;
 
-        //public float jin = 80f;
-        //public float mu = 50f;
-        //public float shui = 50f;
-        //public float huo = 50f;
-        //public float tu = 50f;
+        //cap
+        //[SerializeField] private float jinCap;
+        //[SerializeField] private float muCap;
+        //[SerializeField] private float shuiCap;
+        //[SerializeField] private float huoCap;
+        //[SerializeField] private float tuCap;
+
+        //[SerializeField] private float jin;
+        //[SerializeField] private float mu;
+        //[SerializeField] private float shui;
+        //[SerializeField] private float huo;
+        //[SerializeField] private float tu;
 
         //Wu Xing radar chart
-        [SerializeField] private GameObject characterRadarChartPanelPrefab;
+        //[SerializeField] private GameObject characterRadarChartPanelPrefab;
 
 
         private void Awake()
@@ -124,35 +124,27 @@ namespace HL.Characters
 
             foreach(WuXingType wuXingType in Enum.GetValues(typeof (WuXingType))){
 
-                wuXingStatsDictionary[wuXingType] = wuXingCapStatsDictionary[wuXingType] * 0.5f;
+                wuXingStatsDictionary[wuXingType] = wuXingCapStatsDictionary[wuXingType] * 0.6f;
+
+                Debug.Log(wuXingType + " " + wuXingStatsDictionary[wuXingType]);
             }
+
+
         }
 
-        public void DisplayWuXingCap(Transform transform)
+        public void DisplayWuXingCap(Transform transform, RadarChartMesh characterWuXingCapMesh)
         {
-            characterRadarChartPanelPrefab = Resources.Load<GameObject>("Wu Xing Radar Chart Panel");
-            if (characterRadarChartPanelPrefab is null)
-            {
-                Debug.Log("null");
-            }
-            GameObject wuXingCapChartPanel = Instantiate(characterRadarChartPanelPrefab, transform);
-            RadarChartMesh wuXingMesh = wuXingCapChartPanel.GetComponentInChildren<RadarChartMesh>();
+
             float[] wuXingCapArray = GetWuXingCapArray();
-            wuXingMesh.GenerateRadarMesh(wuXingCapArray, 100);
+            characterWuXingCapMesh.GenerateRadarMesh(wuXingCapArray, (int)maxStat, transform);
             
         }
 
-        public void DisplayWuXing(Transform transform)
+        public void DisplayWuXing(Transform transform, RadarChartMesh characterWuXingMesh)
         {
-            characterRadarChartPanelPrefab = Resources.Load<GameObject>("Wu Xing Radar Chart Panel");
-            if (characterRadarChartPanelPrefab is null)
-            {
-                Debug.Log("null");
-            }
-            GameObject wuXingCapChartPanel = Instantiate(characterRadarChartPanelPrefab, transform);
-            RadarChartMesh wuXingMesh = wuXingCapChartPanel.GetComponentInChildren<RadarChartMesh>();
-            float[] wuXingCapArray = GetWuXingArray();
-            wuXingMesh.GenerateRadarMesh(wuXingCapArray, 100);
+            float[] wuXingArray = GetWuXingArray();
+            characterWuXingMesh.GenerateRadarMesh(wuXingArray, (int)maxStat, transform);
+
 
         }
     }

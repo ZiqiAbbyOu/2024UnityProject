@@ -13,7 +13,7 @@ namespace HL.UI
         public Transform displayChartTransform;
 
 
-        public void GenerateRadarMesh(float[] data, int dataScale)
+        public void GenerateRadarMesh(float[] data, int dataScale, Transform displayChartTransform)
         {
             Mesh mesh = new Mesh();
             Vector3[] vertices = new Vector3[data.Length + 1];

@@ -1,13 +1,11 @@
 ﻿<Properties StartupConfiguration="{7976D3B1-1535-9701-B7BB-09E2143327A4}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/CustomizationScnenes/InputFieldBoundsValidator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/CustomizationScnenes/CustomizationSceneWuXingRadarChartController.cs">
     <Files>
-      <File FileName="Assets/Scripts/UI/General/RadarChartMesh.cs" Line="47" Column="39" />
+      <File FileName="Assets/Scripts/UI/General/RadarChartMesh.cs" Line="16" Column="99" />
       <File FileName="Assets/Scripts/Characters/Properties/PropertiesManager.cs" Line="21" Column="18" />
-      <File FileName="Assets/Scripts/Characters/WuXing.cs" Line="61" Column="59" />
-      <File FileName="Assets/Scripts/UI/CustomizationScnenes/WuXingAdjustmentController.cs" Line="140" Column="1" />
-      <File FileName="Assets/Scripts/UI/CustomizationScnenes/WuXingRadarChartController.cs" Line="62" Column="14" />
-      <File FileName="Assets/Scripts/Characters/CharacterInfo.cs" Line="26" Column="1" />
-      <File FileName="Assets/Scripts/UI/CustomizationScnenes/InputFieldBoundsValidator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/CustomizationScnenes/WuXingAdjustmentController.cs" Line="89" Column="115" />
+      <File FileName="Assets/Scripts/UI/CustomizationScnenes/CustomizationSceneWuXingRadarChartController.cs" Line="121" Column="14" />
+      <File FileName="Assets/Scripts/Characters/WuXing.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,7 +19,7 @@
                 </Node>
                 <Node name="UI" expanded="True">
                   <Node name="CustomizationScnenes" expanded="True">
-                    <Node name="InputFieldBoundsValidator.cs" selected="True" />
+                    <Node name="CustomizationSceneWuXingRadarChartController.cs" selected="True" />
                   </Node>
                   <Node name="General" expanded="True" />
                 </Node>
@@ -37,7 +35,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8d10561d-0913-4647-9e1c-4e6fa84efc78" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="630ed0af-d24b-40e4-8d7c-23088b8e6811" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

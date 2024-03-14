@@ -20,6 +20,9 @@ namespace HL.UI.CustomizationScene {
         public TextMeshProUGUI elementDiscription;
         [SerializeField] private PropertiesManager.WuXingType currentType;
         public HL.Characters.CharacterInfo playerInfo;
+        public Transform wuXingDisplayChartTransform;
+        public RadarChartMesh playerStatsRadarChartMesh;
+        public RadarChartMesh playerCapStatsRadarChartMesh;
 
 
         private void Start()
@@ -30,6 +33,10 @@ namespace HL.UI.CustomizationScene {
                 int index = i; 
                 elementButton[i].onClick.AddListener(() => OnElementButtonClicked(index));
             }
+
+            playerInfo.wuXing.DisplayWuXingCap(wuXingDisplayChartTransform, playerCapStatsRadarChartMesh);
+            //playerInfo.wuXing.SetStatsByCap();
+            playerInfo.wuXing.DisplayWuXing(wuXingDisplayChartTransform, playerStatsRadarChartMesh);
         }
 
 
@@ -61,6 +68,7 @@ namespace HL.UI.CustomizationScene {
 
             }
 
+
             DisplayDiscription();
 
 
@@ -68,13 +76,19 @@ namespace HL.UI.CustomizationScene {
         }
 
         
-
-
-        public void DisplayStatsCapRadarChart(Transform wuXingDisplayChartTransform)
+        // Display radar charts
+        public void DisplayStatsCapRadarChart()
         {
-            RadarChartMesh radarChartMesh = GameObject.Find("Wu Xing Radar Chart Panel(clone)").GetComponent<RadarChartMesh>();
-            radarChartMesh.displayChartTransform = wuXingDisplayChartTransform;
-            radarChartMesh.GenerateRadarMesh(playerInfo.wuXing.GetWuXingCapArray(), (int)playerInfo.wuXing.maxStat);
+            playerCapStatsRadarChartMesh.GenerateRadarMesh(playerInfo.wuXing.GetWuXingCapArray(),
+                (int)playerInfo.wuXing.maxStat,
+                wuXingDisplayChartTransform);
+        }
+
+        public void DisplayStatsRadarChart()
+        {
+            playerStatsRadarChartMesh.GenerateRadarMesh(playerInfo.wuXing.GetWuXingArray(),
+                (int)playerInfo.wuXing.maxStat,
+                wuXingDisplayChartTransform);
         }
 
         public void SetCharacterInfo(HL.Characters.CharacterInfo thisCharacterInfo)

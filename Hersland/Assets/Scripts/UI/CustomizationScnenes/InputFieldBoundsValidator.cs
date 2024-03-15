@@ -15,6 +15,7 @@ public class InputFieldBoundsValidator : MonoBehaviour
     {
         inputField = GetComponent<TMP_InputField>();
         inputField.onEndEdit.AddListener(ValidateInput);
+        inputField.onValueChanged.AddListener(ValidateInput);
     }
 
     public void ValidateInput(string input)

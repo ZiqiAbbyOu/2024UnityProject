@@ -127,16 +127,22 @@ namespace HL.UI.CustomizationScene
 
         public void IncreaseCurrentWuXingElementCapByOne()
         {
-            playerInfo.wuXing.IncreaseWuXingCapStatsByType(currentWuXingType);
-            statsInputField.text = ((int)playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType)).ToString();
-            UpdateWuXingCapMesh();
+            if (playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType) < playerInfo.wuXing.maxStat)
+            {
+                playerInfo.wuXing.IncreaseWuXingCapStatsByType(currentWuXingType);
+                statsInputField.text = ((int)playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType)).ToString();
+                UpdateWuXingCapMesh();
+            }
         }
 
         public void DecreaseCurrentWuXingElementCapByOne()
         {
-            playerInfo.wuXing.DecreaseWuXingCapStatsByType(currentWuXingType);
-            statsInputField.text = ((int)playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType)).ToString();
-            UpdateWuXingCapMesh();
+            if (playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType) > playerInfo.wuXing.minStat)
+            {
+                playerInfo.wuXing.DecreaseWuXingCapStatsByType(currentWuXingType);
+                statsInputField.text = ((int)playerInfo.wuXing.GetWuXingCapStatsByType(currentWuXingType)).ToString();
+                UpdateWuXingCapMesh();
+            }
         }
 
 

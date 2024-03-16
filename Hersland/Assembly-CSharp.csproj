@@ -154,6 +154,7 @@
     <Compile Include="Assets/I2/Localization/Examples/Common/Scripts/RealTimeTranslation.cs" />
     <Compile Include="Assets/Scripts/Characters/CharacterInfo.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Google/GoogleTranslation_Post.cs" />
+    <Compile Include="Assets/Sprites/World/WorldInfo.cs" />
     <Compile Include="Assets/Scripts/UI/CustomizationScnenes/RoleBar.cs" />
     <Compile Include="Assets/Scripts/UI/CustomizationScnenes/RoleBarController.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Utils/CoroutineManager.cs" />

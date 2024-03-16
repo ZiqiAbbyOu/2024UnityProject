@@ -163,11 +163,6 @@ namespace HL.UI.CustomizationScene
         }
 
 
-        public void LogInput()
-        {
-            Debug.Log(statsInputField.text);
-        }
-
 
     }
 

@@ -125,8 +125,6 @@ namespace HL.Characters
             foreach(WuXingType wuXingType in Enum.GetValues(typeof (WuXingType))){
 
                 wuXingStatsDictionary[wuXingType] = wuXingCapStatsDictionary[wuXingType] * 0.6f;
-
-                Debug.Log(wuXingType + " " + wuXingStatsDictionary[wuXingType]);
             }
 
 

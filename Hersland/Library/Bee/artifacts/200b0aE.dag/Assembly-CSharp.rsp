@@ -483,6 +483,7 @@
 "Assets/Scripts/UI/General/QuitGame.cs"
 "Assets/Scripts/UI/General/RadarChartMesh.cs"
 "Assets/Scripts/UI/General/SceneLoader.cs"
+"Assets/Sprites/World/WorldInfo.cs"
 -langversion:9.0
 
 /deterministic

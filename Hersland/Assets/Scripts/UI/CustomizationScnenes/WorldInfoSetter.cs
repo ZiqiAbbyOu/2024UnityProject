@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using HL.World;
 using TMPro;
+using UnityEngine.UI;
 
 namespace HL.UI.CustomizationScene
 {
@@ -11,6 +12,8 @@ namespace HL.UI.CustomizationScene
         public WorldInfo worldInfo = WorldInfo.Instance;
         public TextMeshProUGUI worldSizeTMP;
         public TextMeshProUGUI populationTMP;
+        public TextMeshProUGUI societyTMP;
+        public Slider societySlider;
 
         private void Start()
         {
@@ -67,6 +70,13 @@ namespace HL.UI.CustomizationScene
             UpdateWorldInfoText();
         }
 
+
+        // Society Adjustment
+        public void AdjustSociety()
+        {
+            worldInfo.society = (int)societySlider.value;
+            societyTMP.text = (worldInfo.society.ToString());
+        }
 
 
 

@@ -68,8 +68,6 @@ namespace HL.World
         {
             int valuesCount = System.Enum.GetValues(typeof(WorldSize)).Length;
             worldSize = (WorldSize)(((int)worldSize - 1 + valuesCount) % valuesCount);
-            Debug.Log(worldSize.ToString());
-            Debug.Log(valuesCount);
         }
 
         public void NextPopulation()

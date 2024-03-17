@@ -24,8 +24,8 @@ namespace HL.World
         }
 
         [SerializeField] public WorldSize worldSize;
-        [SerializeField] private Population population;
-        [SerializeField] private int society;
+        [SerializeField] public Population population;
+        [SerializeField] public int society;
 
 
 
@@ -60,8 +60,8 @@ namespace HL.World
 
         public void NextWorldSize()
         {
-            worldSize = (WorldSize)(((int)worldSize + 1) % System.Enum.GetValues(typeof(WorldSize)).Length);
-            Debug.Log(worldSize.ToString());
+            int valuesCount = System.Enum.GetValues(typeof(WorldSize)).Length;
+            worldSize = (WorldSize)(((int)worldSize + 1 + valuesCount) % valuesCount);
         }
 
         public void LastWorldSize()
@@ -70,6 +70,18 @@ namespace HL.World
             worldSize = (WorldSize)(((int)worldSize - 1 + valuesCount) % valuesCount);
             Debug.Log(worldSize.ToString());
             Debug.Log(valuesCount);
+        }
+
+        public void NextPopulation()
+        {
+            int valuesCount = System.Enum.GetValues(typeof(Population)).Length;
+            population = (Population)(((int)population + 1 + valuesCount) % valuesCount);
+        }
+
+        public void LastPopulation()
+        {
+            int valuesCount = System.Enum.GetValues(typeof(Population)).Length;
+            population = (Population)(((int)population - 1 + valuesCount) % valuesCount);
         }
     }
 }

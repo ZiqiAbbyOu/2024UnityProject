@@ -293,6 +293,30 @@ MonoBehaviour:
       - Large
       Flags: 0000
       Languages_Touch: []
+    - Term: Sparse
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7A00\u758F"
+      - Sparse
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Crowded
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5BC6\u96C6"
+      - Crowded
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Normal
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u666E\u901A"
+      - Normal
+      Flags: 0000
+      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 
@@ -308,7 +332,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbxKLWnI25L04dy_a1draLCBc_OxS7Wzszpel_ANesvB_8MzpVZL5Mr5GKc6Zja5BGt9BA/exec
     Google_SpreadsheetKey: 1_1DIBcdBxQGqCVVwtX8Smo7Tn2mifA-V8IukMMNCjg8
     Google_SpreadsheetName: I2Loc Hersland Localization
-    Google_LastUpdatedVersion: 1710709201471
+    Google_LastUpdatedVersion: 1710715599109
     Google_Password: I2Cuiying520!
     GoogleUpdateFrequency: 2
     GoogleInEditorCheckFrequency: 2

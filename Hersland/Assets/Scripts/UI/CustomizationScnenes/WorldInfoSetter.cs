@@ -9,7 +9,8 @@ namespace HL.UI.CustomizationScene
     public class WorldInfoSetter : MonoBehaviour
     {
         public WorldInfo worldInfo = WorldInfo.Instance;
-        public TextMeshProUGUI worldSizeText;
+        public TextMeshProUGUI worldSizeTMP;
+        public TextMeshProUGUI populationTMP;
 
         private void Start()
         {
@@ -20,6 +21,21 @@ namespace HL.UI.CustomizationScene
             UpdateWorldInfoText();
         }
 
+
+        // Update Info text
+        public void UpdateWorldInfoText()
+        {
+            string worldSizeString = I2.Loc.LocalizationManager.GetTranslation(worldInfo.worldSize.ToString());
+            worldSizeTMP.text = worldSizeString;
+
+            string population = I2.Loc.LocalizationManager.GetTranslation(worldInfo.population.ToString());
+            populationTMP.text = population;
+        }
+
+
+
+
+        // World Size Adjustment
         public void NextWorldSize()
         {
             worldInfo.NextWorldSize();
@@ -33,11 +49,26 @@ namespace HL.UI.CustomizationScene
             UpdateWorldInfoText();
         }
 
-        public void UpdateWorldInfoText()
+        
+
+
+
+        // Population Adjustment
+        public void NextPopulation()
         {
-            string worldSizeString = I2.Loc.LocalizationManager.GetTranslation(worldInfo.worldSize.ToString());
-            worldSizeText.text = worldSizeString;
+            worldInfo.NextPopulation();
+            UpdateWorldInfoText();
+
         }
+
+        public void LastPopulation()
+        {
+            worldInfo.LastPopulation();
+            UpdateWorldInfoText();
+        }
+
+
+
 
 
     }

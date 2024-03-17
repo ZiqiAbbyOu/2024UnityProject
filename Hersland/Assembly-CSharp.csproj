@@ -84,7 +84,9 @@
     <Compile Include="Assets/Scripts/UI/CustomizationScnenes/CustomizationSceneManager.cs" />
     <Compile Include="Assets/Scripts/UI/General/RadarChartMesh.cs" />
     <Compile Include="Assets/Scripts/Map/Tiles/TileInfo.cs" />
+    <Compile Include="Assets/Free UI build package/Script/Slide.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/LanguageSource/LanguageSourceData_Export_Google.cs" />
+    <Compile Include="Assets/Free UI build package/Script/Togglescript.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Targets/LocalizeTarget_UnityStandard_TextMesh.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Utils/LocalizedString.cs" />
     <Compile Include="Assets/Scripts/Characters/Properties/PropertiesManager.cs" />
@@ -1235,6 +1237,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{18DB94AA-950B-9CBE-1010-6C1F4AFA38A1}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="AYellowpaper.SerializedCollections.csproj">
+      <Project>{667811F2-BC3C-1BCA-ED5C-9AA6BD098FBD}</Project>
+      <Name>AYellowpaper.SerializedCollections</Name>
+    </ProjectReference>
+    <ProjectReference Include="AYellowpaper.SerializedCollections.Editor.csproj">
+      <Project>{F1D4BBE4-4B34-C865-A99A-DB9CEA3BC637}</Project>
+      <Name>AYellowpaper.SerializedCollections.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)/Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

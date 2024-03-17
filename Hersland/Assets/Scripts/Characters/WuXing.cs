@@ -5,6 +5,7 @@ using HL.UI;
 using HL.Characters.Properties;
 using static HL.Characters.Properties.PropertiesManager;
 using System;
+using AYellowpaper.SerializedCollections;
 
 namespace HL.Characters
 {
@@ -15,8 +16,19 @@ namespace HL.Characters
         public float maxStat = 100;
         public float minStat = 0;
 
-        public Dictionary<WuXingType, float> wuXingStatsDictionary = new Dictionary<WuXingType, float>();
-        public Dictionary<WuXingType, float> wuXingCapStatsDictionary = new Dictionary<WuXingType, float>();
+
+
+        //public Dictionary<WuXingType, float> wuXingStatsDictionary = new Dictionary<WuXingType, float>();
+        //public Dictionary<WuXingType, float> wuXingCapStatsDictionary = new Dictionary<WuXingType, float>();
+
+        //[SerializeField]
+        [SerializedDictionary("Wu Xing Type", "float")]
+        public SerializedDictionary<WuXingType, float> wuXingStatsDictionary;
+
+        [SerializedDictionary("Wu Xing Type", "float")]
+        public SerializedDictionary<WuXingType, float> wuXingCapStatsDictionary;
+
+
 
 
         //cap
@@ -46,7 +58,6 @@ namespace HL.Characters
 
         public void InitializeWuXingStatsDictionary()
         {
-            
             wuXingStatsDictionary.Add(WuXingType.Jin, 50);
             wuXingStatsDictionary.Add(WuXingType.Mu, 50);
             wuXingStatsDictionary.Add(WuXingType.Shui, 50);

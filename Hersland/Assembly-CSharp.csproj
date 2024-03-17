@@ -88,6 +88,7 @@
     <Compile Include="Assets/I2/Localization/Scripts/LanguageSource/LanguageSourceData_Export_Google.cs" />
     <Compile Include="Assets/Free UI build package/Script/Togglescript.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Targets/LocalizeTarget_UnityStandard_TextMesh.cs" />
+    <Compile Include="Assets/Scripts/World/WorldInfo.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Utils/LocalizedString.cs" />
     <Compile Include="Assets/Scripts/Characters/Properties/PropertiesManager.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/LanguageSource/LanguageSourceData.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="Assets/Scripts/UI/CustomizationScnenes/RoleDescriptionUIManager.cs" />
     <Compile Include="Assets/Scripts/UI/CustomizationScnenes/WuXingAdjustmentController.cs" />
     <Compile Include="Assets/I2/Localization/Examples/Common/Scripts/NGUI_LanguagePopup.cs" />
+    <Compile Include="Assets/Scripts/UI/CustomizationScnenes/WorldInfoSetter.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Google/SimpleJSON.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/LanguageSource/LanguageSourceData_Terms.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Google/GoogleTranslation_Queries.cs" />
@@ -156,7 +158,6 @@
     <Compile Include="Assets/I2/Localization/Examples/Common/Scripts/RealTimeTranslation.cs" />
     <Compile Include="Assets/Scripts/Characters/CharacterInfo.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Google/GoogleTranslation_Post.cs" />
-    <Compile Include="Assets/Sprites/World/WorldInfo.cs" />
     <Compile Include="Assets/Scripts/UI/CustomizationScnenes/RoleBar.cs" />
     <Compile Include="Assets/Scripts/UI/CustomizationScnenes/RoleBarController.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Utils/CoroutineManager.cs" />

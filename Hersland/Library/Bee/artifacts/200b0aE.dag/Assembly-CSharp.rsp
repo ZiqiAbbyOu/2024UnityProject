@@ -484,11 +484,12 @@
 "Assets/Scripts/UI/CustomizationScnenes/RoleDescriptionUIManager.cs"
 "Assets/Scripts/UI/CustomizationScnenes/RoleDisplayer.cs"
 "Assets/Scripts/UI/CustomizationScnenes/RoleSelectionController.cs"
+"Assets/Scripts/UI/CustomizationScnenes/WorldInfoSetter.cs"
 "Assets/Scripts/UI/CustomizationScnenes/WuXingAdjustmentController.cs"
 "Assets/Scripts/UI/General/QuitGame.cs"
 "Assets/Scripts/UI/General/RadarChartMesh.cs"
 "Assets/Scripts/UI/General/SceneLoader.cs"
-"Assets/Sprites/World/WorldInfo.cs"
+"Assets/Scripts/World/WorldInfo.cs"
 -langversion:9.0
 
 /deterministic

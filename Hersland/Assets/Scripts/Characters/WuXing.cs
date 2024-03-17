@@ -16,37 +16,11 @@ namespace HL.Characters
         public float maxStat = 100;
         public float minStat = 0;
 
-
-
-        //public Dictionary<WuXingType, float> wuXingStatsDictionary = new Dictionary<WuXingType, float>();
-        //public Dictionary<WuXingType, float> wuXingCapStatsDictionary = new Dictionary<WuXingType, float>();
-
-        //[SerializeField]
         [SerializedDictionary("Wu Xing Type", "float")]
         public SerializedDictionary<WuXingType, float> wuXingStatsDictionary;
 
         [SerializedDictionary("Wu Xing Type", "float")]
         public SerializedDictionary<WuXingType, float> wuXingCapStatsDictionary;
-
-
-
-
-        //cap
-        //[SerializeField] private float jinCap;
-        //[SerializeField] private float muCap;
-        //[SerializeField] private float shuiCap;
-        //[SerializeField] private float huoCap;
-        //[SerializeField] private float tuCap;
-
-        //[SerializeField] private float jin;
-        //[SerializeField] private float mu;
-        //[SerializeField] private float shui;
-        //[SerializeField] private float huo;
-        //[SerializeField] private float tu;
-
-        //Wu Xing radar chart
-        //[SerializeField] private GameObject characterRadarChartPanelPrefab;
-
 
         private void Awake()
         {

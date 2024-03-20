@@ -60,6 +60,7 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.15f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/Characters/NPC Controller/BehaviorTree.cs" />
     <Compile Include="Assets/Scripts/UI/CustomizationScnenes/InputFieldBoundsValidator.cs" />
     <Compile Include="Assets/I2/Localization/Examples/Common/Scripts/ToggleLanguage.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Google/GoogleTranslation.cs" />
@@ -100,9 +101,11 @@
     <Compile Include="Assets/I2/Localization/Scripts/Utils/RTLFixer.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Targets/ILocalizeTarget.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Targets/LocalizeTarget_NGUI_Texture.cs" />
+    <Compile Include="Assets/Scripts/Characters/NPC Controller/BlackBoard.cs" />
     <Compile Include="Assets/I2/Localization/Examples/Common/Scripts/GlobalParametersExample.cs" />
     <Compile Include="Assets/Scripts/UI/CustomizationScnenes/CustomizationSceneWuXingRadarChartController.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/LanguageSource/LanguageSourceData_Misc.cs" />
+    <Compile Include="Assets/Scripts/Characters/NPC Controller/TreeNode.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Utils/HindiFixer.cs" />
     <Compile Include="Assets/I2/Localization/Examples/Common/Scripts/Example_LocalizedString.cs" />
     <Compile Include="Assets/I2/Localization/Examples/Common/Scripts/RegisterBundlesManager.cs" />
@@ -120,6 +123,7 @@
     <Compile Include="Assets/I2/Localization/Scripts/Manager/LocalizationManager_Targets.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/EventCallback.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Utils/SetLanguageDropdown.cs" />
+    <Compile Include="Assets/Scripts/Characters/NPC Controller/ActionNode.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Targets/LocalizeTarget_NGUI_Sprite.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Targets/LocalizeTarget_UnityUI_RawImage.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Manager/LocalizationManager.cs" />
@@ -129,6 +133,7 @@
     <Compile Include="Assets/Scripts/UI/General/SceneLoader.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Manager/LocalizationManager_SystemLanguage.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Utils/RegisterGlobalParameters.cs" />
+    <Compile Include="Assets/Scripts/Characters/NPC Controller/NPCController.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Utils/StringObfuscator.cs" />
     <Compile Include="Assets/Scripts/UI/CustomizationScnenes/RoleSelectionController.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Manager/LocalizationManager_Language.cs" />
@@ -145,6 +150,7 @@
     <Compile Include="Assets/I2/Localization/Scripts/Targets/LocalizeTarget_UnityStandard_SpriteRenderer.cs" />
     <Compile Include="Assets/Scripts/Map/MapGenerator.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Utils/LocalizationParamsManager.cs" />
+    <Compile Include="Assets/Scripts/Characters/NPC Controller/ActionNodes/IdleActionNode.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Google/TranslationJob_WEB.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Google/TranslationJob_Main.cs" />
     <Compile Include="Assets/I2/Localization/Scripts/Google/TranslationJob.cs" />
